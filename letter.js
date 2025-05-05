@@ -1,10 +1,15 @@
 document.querySelector('.bodyOfLetter').style.setProperty('--bg-img', "url('./jaanu.jpg')");
 
+window.onload = function () {
+    if (window.innerWidth < 1024) {
+        alert("Hey, it's best viewed on a computer....");
+    }
+};
+
 async function printLetter() {
     document.getElementById('settings').style.display = 'none';
     await window.print();
     document.getElementById('settings').style.display = 'block';
-
 }
 
 function updateDateTime() {
